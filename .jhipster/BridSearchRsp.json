@@ -1,0 +1,15 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "content",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20170703200053",
+    "entityTableName": "brid_search_rsp",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no"
+}

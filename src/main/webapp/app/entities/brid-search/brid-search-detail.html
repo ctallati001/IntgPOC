@@ -1,0 +1,39 @@
+
+<div>
+    <h2><span>Brid Search</span> {{vm.bridSearch.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span>Ofac Rqst Infold</span></dt>
+        <dd>
+            <span>{{vm.bridSearch.ofacRqstInfold}}</span>
+        </dd>
+        <dt><span>Status</span></dt>
+        <dd>
+            <span>{{vm.bridSearch.status}}</span>
+        </dd>
+        <dt><span>Add Status</span></dt>
+        <dd>
+            <span>{{vm.bridSearch.addStatus}}</span>
+        </dd>
+        <dt><span>Brid Search Rqst</span></dt>
+        <dd>
+            <a ui-sref="brid-search-rqst-detail({id:vm.bridSearch.bridSearchRqst.id})">{{vm.bridSearch.bridSearchRqst.id}}</a>
+        </dd>
+        <dt><span>Brid Search Rsp</span></dt>
+        <dd>
+            <a ui-sref="brid-search-rsp-detail({id:vm.bridSearch.bridSearchRsp.id})">{{vm.bridSearch.bridSearchRsp.id}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button" ui-sref="brid-search-detail.edit({id:vm.bridSearch.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down"> Edit</span>
+    </button>
+</div>

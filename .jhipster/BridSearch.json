@@ -1,0 +1,42 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "relationshipName": "bridSearchRqst",
+            "otherEntityName": "bridSearchRqst",
+            "otherEntityField": "id",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "bridSearch"
+        },
+        {
+            "relationshipType": "one-to-one",
+            "relationshipName": "bridSearchRsp",
+            "otherEntityName": "bridSearchRsp",
+            "otherEntityField": "id",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "bridSearch"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "ofacRqstInfold",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "status",
+            "fieldType": "BridSearchStatus",
+            "fieldValues": "NO_MATCH,MATCH"
+        },
+        {
+            "fieldName": "addStatus",
+            "fieldType": "BridSearchAddStatus",
+            "fieldValues": "IN_REVIEW,COMPLETE"
+        }
+    ],
+    "changelogDate": "20170703200051",
+    "entityTableName": "brid_search",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no"
+}

@@ -1,0 +1,80 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myAddressInfoLabel">Create or edit a Address Info</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.addressInfo.id">
+            <label for="id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.addressInfo.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_line1">Line 1</label>
+            <input type="text" class="form-control" name="line1" id="field_line1"
+                    ng-model="vm.addressInfo.line1"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_line2">Line 2</label>
+            <input type="text" class="form-control" name="line2" id="field_line2"
+                    ng-model="vm.addressInfo.line2"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_state">State</label>
+            <input type="text" class="form-control" name="state" id="field_state"
+                    ng-model="vm.addressInfo.state"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_city">City</label>
+            <input type="text" class="form-control" name="city" id="field_city"
+                    ng-model="vm.addressInfo.city"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_zipCode">Zip Code</label>
+            <input type="text" class="form-control" name="zipCode" id="field_zipCode"
+                    ng-model="vm.addressInfo.zipCode"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_countryOfResidence">Country Of Residence</label>
+            <input type="text" class="form-control" name="countryOfResidence" id="field_countryOfResidence"
+                    ng-model="vm.addressInfo.countryOfResidence"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_taxCountry">Tax Country</label>
+            <input type="text" class="form-control" name="taxCountry" id="field_taxCountry"
+                    ng-model="vm.addressInfo.taxCountry"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_countriesOfInc">Countries Of Inc</label>
+            <input type="text" class="form-control" name="countriesOfInc" id="field_countriesOfInc"
+                    ng-model="vm.addressInfo.countriesOfInc"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_kyaActCountries">Kya Act Countries</label>
+            <input type="text" class="form-control" name="kyaActCountries" id="field_kyaActCountries"
+                    ng-model="vm.addressInfo.kyaActCountries"
+                    />
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span>Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span>Save</span>
+        </button>
+    </div>
+</form>

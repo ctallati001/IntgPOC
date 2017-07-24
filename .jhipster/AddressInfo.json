@@ -1,0 +1,47 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "line1",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "line2",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "state",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "city",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "zipCode",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "countryOfResidence",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "taxCountry",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "countriesOfInc",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "kyaActCountries",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20170703200050",
+    "entityTableName": "address_info",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no"
+}

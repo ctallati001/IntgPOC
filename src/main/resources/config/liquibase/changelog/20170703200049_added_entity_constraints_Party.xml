@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <!--
+        Added the constraints for entity Party.
+    -->
+    <changeSet id="20170703200049-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="address_info_id"
+                                 baseTableName="party"
+                                 constraintName="fk_party_address_info_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="address_info"/>
+
+    </changeSet>
+</databaseChangeLog>

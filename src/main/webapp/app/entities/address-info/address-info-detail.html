@@ -1,0 +1,55 @@
+
+<div>
+    <h2><span>Address Info</span> {{vm.addressInfo.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span>Line 1</span></dt>
+        <dd>
+            <span>{{vm.addressInfo.line1}}</span>
+        </dd>
+        <dt><span>Line 2</span></dt>
+        <dd>
+            <span>{{vm.addressInfo.line2}}</span>
+        </dd>
+        <dt><span>State</span></dt>
+        <dd>
+            <span>{{vm.addressInfo.state}}</span>
+        </dd>
+        <dt><span>City</span></dt>
+        <dd>
+            <span>{{vm.addressInfo.city}}</span>
+        </dd>
+        <dt><span>Zip Code</span></dt>
+        <dd>
+            <span>{{vm.addressInfo.zipCode}}</span>
+        </dd>
+        <dt><span>Country Of Residence</span></dt>
+        <dd>
+            <span>{{vm.addressInfo.countryOfResidence}}</span>
+        </dd>
+        <dt><span>Tax Country</span></dt>
+        <dd>
+            <span>{{vm.addressInfo.taxCountry}}</span>
+        </dd>
+        <dt><span>Countries Of Inc</span></dt>
+        <dd>
+            <span>{{vm.addressInfo.countriesOfInc}}</span>
+        </dd>
+        <dt><span>Kya Act Countries</span></dt>
+        <dd>
+            <span>{{vm.addressInfo.kyaActCountries}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button" ui-sref="address-info-detail.edit({id:vm.addressInfo.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down"> Edit</span>
+    </button>
+</div>

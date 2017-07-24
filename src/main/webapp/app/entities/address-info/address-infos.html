@@ -1,0 +1,72 @@
+<div>
+    <h2>Address Infos</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="address-info.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span >
+                        Create new Address Info
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span>ID</span></th>
+                    <th><span>Line 1</span></th>
+                    <th><span>Line 2</span></th>
+                    <th><span>State</span></th>
+                    <th><span>City</span></th>
+                    <th><span>Zip Code</span></th>
+                    <th><span>Country Of Residence</span></th>
+                    <th><span>Tax Country</span></th>
+                    <th><span>Countries Of Inc</span></th>
+                    <th><span>Kya Act Countries</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="addressInfo in vm.addressInfos track by addressInfo.id">
+                    <td><a ui-sref="address-info-detail({id:addressInfo.id})">{{addressInfo.id}}</a></td>
+                    <td>{{addressInfo.line1}}</td>
+                    <td>{{addressInfo.line2}}</td>
+                    <td>{{addressInfo.state}}</td>
+                    <td>{{addressInfo.city}}</td>
+                    <td>{{addressInfo.zipCode}}</td>
+                    <td>{{addressInfo.countryOfResidence}}</td>
+                    <td>{{addressInfo.taxCountry}}</td>
+                    <td>{{addressInfo.countriesOfInc}}</td>
+                    <td>{{addressInfo.kyaActCountries}}</td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="address-info-detail({id:addressInfo.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-sm-down"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="address-info.edit({id:addressInfo.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-sm-down"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="address-info.delete({id:addressInfo.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-sm-down"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

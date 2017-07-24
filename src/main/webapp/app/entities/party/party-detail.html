@@ -1,0 +1,35 @@
+
+<div>
+    <h2><span>Party</span> {{vm.party.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span>Party Id Value</span></dt>
+        <dd>
+            <span>{{vm.party.partyIdValue}}</span>
+        </dd>
+        <dt><span>Party Id Type</span></dt>
+        <dd>
+            <span>{{vm.party.partyIdType}}</span>
+        </dd>
+        <dt><span>Party Type</span></dt>
+        <dd>
+            <span>{{vm.party.partyType}}</span>
+        </dd>
+        <dt><span>Address Info</span></dt>
+        <dd>
+            <a ui-sref="address-info-detail({id:vm.party.addressInfo.id})">{{vm.party.addressInfo.id}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button" ui-sref="party-detail.edit({id:vm.party.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down"> Edit</span>
+    </button>
+</div>
